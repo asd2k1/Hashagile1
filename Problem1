@@ -1,0 +1,26 @@
+def rotate_array(arr, num)
+    arrsize = arr.length
+    num = num % arrsize
+    rotate(arr, 0, arrsize - 1)
+    rotate (arr, 0, num - 1)
+    rotate(arr, num, arrsize - 1)
+end
+def rotate(arr, startind, endind)
+    while startind < endind
+         arr[startind], arr[endind] = arr[endind], arr[startind]
+         startind +=1
+         endind -= 1
+    end
+end
+array = [1, 2, 3, 4, 5]
+num = 2
+rotate_array(array, num)
+puts array.inspect
+array2 = [5, 6, 7, 8, 91
+num2 = 3
+rotate_array(array2, num2)
+puts array2.inspect
+array3 = [1, 2, 3, 4, 5]
+num3=2
+rotate_array(array3, num3) 
+puts array3.inspect
